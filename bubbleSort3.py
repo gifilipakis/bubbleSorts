@@ -9,10 +9,9 @@ start_time = datetime.datetime.now()
 pid = os.getpid()
 py = psutil.Process(pid)
 
-with open('bubbleSort3.csv', encoding="utf8") as myfile:
+with open('arquivo100000.csv', encoding="utf8") as myfile:
     l = myfile.read()
     l = re.split('\n|,',l)
-print(l)
 
 qtrocas = 0
 qcomparacoes = 0
