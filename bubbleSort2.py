@@ -12,18 +12,21 @@ py = psutil.Process(pid)
 with open('arquivo100.csv', encoding="utf8") as myfile:
     l = myfile.read()
     l = re.split('\n|,',l)
-
+print(l)
 qtrocas = 0
 qcomparacoes = 0
 
 for j in range(len(l)):
-    for i in range(len(l) + 1):
+    i = len(l)-1
+    while i > (j + 1):
         qcomparacoes += 1
         if l[i] < l[i-1]:
             qtrocas += 1
             aux = l[i]
             l[i] = l[i-1]
             l[i-1] = aux
+        i -= 1
+print(l)
 
 
 end_time = datetime.datetime.now()

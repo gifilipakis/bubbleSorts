@@ -1,7 +1,7 @@
 import random
 
-for i in range(99999):
-    with open('arquivo100000.csv', "a") as myfile:
-        myfile.write(str(random.randint(1, 100000)) + "\n")
-myfile.write(str(random.randint(1, 100000)))
+with open('arquivo100.csv', "a") as myfile:
+    for i in range(99):
+            myfile.write(str(random.randint(1, 100)) + "\n")
+    myfile.write(str(random.randint(1, 100)))
 myfile.close() 
