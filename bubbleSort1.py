@@ -9,7 +9,7 @@ start_time = datetime.datetime.now()
 pid = os.getpid()
 py = psutil.Process(pid)
 
-with open('bubbleSort1.csv', encoding="utf8") as myfile:
+with open('bubbleSort2.csv', encoding="utf8") as myfile:
     l = myfile.read()
     l = re.split('\n|,',l)
 print(l)
@@ -35,4 +35,4 @@ print('Quantidade de comparações'+': '+str(qcomparacoes))
 print('Quantidade de trocas'+': '+str(qtrocas))
 print('Tempo de execução'+': '+str(execution_time))
 print('Consumo de CPU'+': '+str(py.cpu_times()[0]))
-print('Consumo de memória'+': '+str(py.memory_info()[0]))
+print('Consumo de memória'+': '+str(py.memory_info()[0]/8000000000))

@@ -18,7 +18,7 @@ qtrocas = 0
 qcomparacoes = 0
 
 for j in range(len(l)):
-    for i in j + 1:
+    for i in range(len(l) + 1):
         qcomparacoes += 1
         if l[i] < l[i-1]:
             qtrocas += 1
@@ -35,4 +35,4 @@ print('Quantidade de comparações'+': '+str(qcomparacoes))
 print('Quantidade de trocas'+': '+str(qtrocas))
 print('Tempo de execução'+': '+str(execution_time))
 print('Consumo de CPU'+': '+str(py.cpu_times()[0]))
-print('Consumo de memória'+': '+str(py.memory_info()[0]))
+print('Consumo de memória'+': '+str(py.memory_info()[0]/8000000000))
