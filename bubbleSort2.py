@@ -18,7 +18,7 @@ qcomparacoes = 0
 
 for j in range(len(l)):
     i = len(l)-1
-    while i > (j + 1):
+    while i >= (j + 1):
         qcomparacoes += 1
         if l[i] < l[i-1]:
             qtrocas += 1
